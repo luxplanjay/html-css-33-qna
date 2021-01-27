@@ -1,0 +1,30 @@
+rules:
+  block-no-empty: true
+  color-no-invalid-hex: true
+  font-family-no-duplicate-names: true
+  font-family-no-missing-generic-family-keyword: true
+  function-calc-no-invalid: true
+  function-calc-no-unspaced-operator: true
+  function-linear-gradient-no-nonstandard-direction: true
+  string-no-newline: true
+  unit-no-unknown: true
+  property-no-unknown: true
+  declaration-block-no-duplicate-properties: true
+  comment-empty-line-before:
+    - always
+    - ignore:
+        - stylelint-commands
+        - after-comment
+  declaration-colon-space-after: always
+  declaration-no-important: true
+  indentation:
+    - 2
+    - ignore:
+        - inside-parens
+  max-empty-lines: 2
+  rule-empty-line-before:
+    - always
+    - except:
+        - first-nested
+      ignore:
+        - after-comment
