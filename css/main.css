@@ -1,0 +1,51 @@
+/* .features {
+}
+
+.features-item {
+}
+
+.list-item {
+} */
+
+body {
+  margin: 20px;
+}
+
+.link {
+  outline: none;
+  color: teal;
+}
+
+.link:hover,
+.link:focus {
+  color: tomato;
+  background-color: #ccc;
+}
+
+.set-item {
+  font-size: 40px;
+  color: tomato;
+}
+
+.set-item:nth-child(2n) {
+  color: green;
+}
+
+.set-item:nth-child(2n + 1) {
+  color: blue;
+}
+
+.section {
+}
+.section-title {
+}
+
+.features {
+}
+
+.features-item {
+}
+
+.align-right {
+  text-align: right;
+}
