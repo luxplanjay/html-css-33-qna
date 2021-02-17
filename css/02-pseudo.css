@@ -1,4 +1,23 @@
 .heading {
+  display: inline-block;
   margin: 0;
   text-align: center;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 10px;
+  width: 100%;
+  background-color: tomato;
+  border-radius: 10px;
+
+  transform: scaleX(0);
+  transition: 250ms transform ease-in-out;
+}
+
+.heading:hover::after {
+  transform: scaleX(1);
 }

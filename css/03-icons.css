@@ -2,8 +2,28 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
 }
 
 .animals * {
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
+}
+
+.animals-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  color: blue;
+}
+
+.animals-link:hover,
+.animals-link:focus {
+  background-color: #ccc;
+  color: green;
+}
+
+.animals-icon {
+  fill: currentColor;
 }
