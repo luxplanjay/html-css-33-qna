@@ -1,0 +1,29 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.card-set .item {
+  margin-left: 20px;
+  margin-top: 20px;
+  flex-basis: calc(100% / 3 - 20px);
+}
