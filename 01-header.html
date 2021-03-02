@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/01-header.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header sticky">
       <div class="container">
         <a href="index.html" class="link">На главную</a>
       </div>
@@ -242,5 +242,13 @@
         nesciunt? Suscipit, labore.
       </p>
     </div>
+
+    <script>
+      // (() => {
+      //   const header = document.querySelector('.page-header');
+      //   const { height } = header.getBoundingClientRect();
+      //   document.body.style = `padding-top: ${height}px`;
+      // })();
+    </script>
   </body>
 </html>
