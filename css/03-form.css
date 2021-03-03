@@ -1,2 +1,63 @@
-/* box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
-0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%); */
+.signup-form {
+  max-width: 400px;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  background-color: #fff;
+}
+
+.signup-form .input {
+  width: 100%;
+  padding: 16px;
+  padding-left: 48px;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  font-family: inherit;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.signup-form .input:focus {
+  box-shadow: 0 0 0 1px blue;
+}
+
+.signup-form .group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.signup-form .label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.signup-form .hint {
+  font-size: 12px;
+}
+
+.signup-form .error {
+  margin-bottom: 0;
+  margin-top: 4px;
+  color: tomato;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.signup-form .input-wrapper {
+  position: relative;
+}
+
+.signup-form .icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.signup-form .input:focus + .icon {
+  fill: tomato;
+}

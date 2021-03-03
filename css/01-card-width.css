@@ -1,0 +1,16 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px dashed tomato;
+}
+
+.card-set {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-set .item {
+  outline: 2px dashed blue;
+  flex-basis: calc((100% - 60px) / 3);
+}

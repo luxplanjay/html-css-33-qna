@@ -4,6 +4,8 @@
   --text-color: #212121;
   --accent-color: #e91e63;
   --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
+  --z-page-header: 1;
+  --z-modal: 2;
 }
 
 *,
@@ -24,4 +26,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.backdrop {
+  z-index: var(--z-modal);
 }

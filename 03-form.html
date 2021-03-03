@@ -9,5 +9,33 @@
   </head>
   <body>
     <p><a href="index.html">На главную</a></p>
+
+    <form class="signup-form" autocomplete="off">
+      <div class="group">
+        <label for="email" class="label">Почта</label>
+        <div class="input-wrapper">
+          <input class="input" type="email" name="email" id="email" />
+          <svg width="24" height="24" class="icon">
+            <use href="images/icons.svg#email"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="password" class="label">
+          Пароль
+          <span class="hint">Не меньше 8 символов</span>
+        </label>
+        <div class="input-wrapper">
+          <input class="input" type="password" name="password" id="password" />
+          <svg width="24" height="24" class="icon">
+            <use href="images/icons.svg#lock"></use>
+          </svg>
+        </div>
+        <p class="error">Что-то пошло не так!</p>
+      </div>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
   </body>
 </html>

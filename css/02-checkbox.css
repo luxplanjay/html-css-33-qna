@@ -1,0 +1,17 @@
+.check-icon {
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.check-icon use {
+  display: none;
+}
+
+.check-icon:hover {
+  border: none;
+}
+
+.check-icon:hover use {
+  display: block;
+}
