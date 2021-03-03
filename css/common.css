@@ -1,0 +1,27 @@
+:root {
+  --body-bg-color: #f9f9fd;
+  --white-color: #fff;
+  --text-color: #212121;
+  --accent-color: #e91e63;
+  --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
