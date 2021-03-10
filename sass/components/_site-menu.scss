@@ -1,0 +1,17 @@
+.site-menu {
+  display: flex;
+}
+
+.site-menu__link {
+  display: block;
+  padding: 16px 24px;
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+}

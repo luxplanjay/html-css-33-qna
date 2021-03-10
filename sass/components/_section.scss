@@ -1,0 +1,27 @@
+.section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  &--services {
+    background-color: #80deea;
+  }
+
+  &--pricing {
+    background-color: #ffe082;
+  }
+
+  &--couriers {
+    background-color: #a5d6a7;
+  }
+
+  &--about {
+    background-color: #9fa8da;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
