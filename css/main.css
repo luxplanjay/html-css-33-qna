@@ -24,17 +24,31 @@ ul {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 480px;
+  min-width: 320px;
   padding-left: 12px;
   padding-right: 12px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .site-header {
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
+  width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -65,9 +79,15 @@ ul {
 }
 
 .site-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-menu__link {
@@ -88,22 +108,6 @@ ul {
   padding-bottom: 64px;
 }
 
-.section--services {
-  background-color: #80deea;
-}
-
-.section--pricing {
-  background-color: #ffe082;
-}
-
-.section--couriers {
-  background-color: #a5d6a7;
-}
-
-.section--about {
-  background-color: #9fa8da;
-}
-
 .section__title {
   margin-top: 0;
   margin-bottom: 32px;
@@ -111,22 +115,28 @@ ul {
   text-transform: uppercase;
 }
 
-.services-list {
-  --grid-gap: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: calc(-1 * var(--grid-gap));
-  margin-left: calc(-1 * var(--grid-gap));
+@media (min-width: 768px) {
+  .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-.services-list__item {
-  -ms-flex-preferred-size: calc((100% - var(--grid-gap) * 3) / 3);
-      flex-basis: calc((100% - var(--grid-gap) * 3) / 3);
-  margin-left: var(--grid-gap);
-  margin-top: var(--grid-gap);
+@media (max-width: 767px) {
+  .services-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-list__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .services-list__title {
@@ -140,29 +150,53 @@ ul {
 }
 
 .couriers-list {
-  --grid-gap: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: calc(-1 * var(--grid-gap));
-  margin-left: calc(-1 * var(--grid-gap));
+  --grid-gap: 30px;
 }
 
-.couriers-list__item {
-  -ms-flex-preferred-size: calc((100% - var(--grid-gap) * 3) / 3);
-      flex-basis: calc((100% - var(--grid-gap) * 3) / 3);
-  margin-left: var(--grid-gap);
-  margin-top: var(--grid-gap);
+@media (min-width: 768px) {
+  .couriers-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * var(--grid-gap));
+    margin-left: calc(-1 * var(--grid-gap));
+  }
+}
+
+@media (min-width: 768px) {
+  .couriers-list__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin-top: var(--grid-gap);
+    margin-left: var(--grid-gap);
+  }
+}
+
+@media (min-width: 1200px) {
+  .couriers-list__item {
+    -ms-flex-preferred-size: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .couriers-list__thumb {
-  height: 320px;
-  border-radius: 8px;
+  height: 460px;
+  border-radius: 4px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 2px 1px -1px black, 0px 1px 1px 0px black, 0px 1px 3px 0px black;
-          box-shadow: 0px 2px 1px -1px black, 0px 1px 1px 0px black, 0px 1px 3px 0px black;
+}
+
+@media (min-width: 768px) {
+  .couriers-list__thumb {
+    height: 364px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .couriers-list__thumb {
+    height: 260px;
+  }
 }
 
 .couriers-list__img {
@@ -170,23 +204,5 @@ ul {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.price-table {
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-}
-
-.price-table__cell {
-  border: 1px solid #2a2a2a;
-  padding: 16px;
-  font-size: 20px;
-  color: #2a2a2a;
-}
-
-.price-table__cell--heading {
-  text-align: center;
-  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

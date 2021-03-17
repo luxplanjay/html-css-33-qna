@@ -1,16 +1,20 @@
 .services-list {
-  --grid-gap: 16px;
-
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--grid-gap));
-  margin-left: calc(-1 * var(--grid-gap));
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .services-list__item {
-  flex-basis: calc((100% - var(--grid-gap) * 3) / 3);
-  margin-left: var(--grid-gap);
-  margin-top: var(--grid-gap);
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .services-list__title {
